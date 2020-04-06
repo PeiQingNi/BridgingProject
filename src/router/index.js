@@ -30,6 +30,7 @@ import VirtualizedListComponent from '../pages/home/VirtualizedListComponent';
 import WebViewComponent from '../pages/home/WebViewComponent';
 
 import Native from '../pages/native/Native';
+import NativeModel from '../pages/native/NativeModel';
 
 const Stack = createStackNavigator();
 
@@ -103,6 +104,7 @@ function NativeStack() {
   return (
     <Stack.Navigator>
       <Stack.Screen name="Native" component={Native} />
+      <Stack.Screen name="NativeModel" component={NativeModel} />
     </Stack.Navigator>
   );
 }
