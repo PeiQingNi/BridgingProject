@@ -75,6 +75,8 @@ export default class NativeModel extends React.Component {
             this.updateEvents();
           }}
         />
+
+        <Text>{CalendarManager.name}</Text>
       </View>
     );
   }

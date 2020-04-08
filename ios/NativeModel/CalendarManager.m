@@ -13,6 +13,8 @@
 
 RCT_EXPORT_MODULE();
 
+
+#pragma mark - React To Native
 RCT_EXPORT_METHOD(addEvent:(NSString *)name location:(NSString *)location) {
   RCTLogInfo(@"name:%@ location:%@", name, location);
 }
@@ -25,6 +27,8 @@ RCT_REMAP_METHOD(addMoreEvent, details:(NSDictionary *)dict) {
   RCTLogInfo(@"dict:%@", dict);
 }
 
+
+#pragma mark - Native To React
 RCT_REMAP_METHOD(findEvent, event:(RCTResponseSenderBlock)callback) {
   NSArray *arr = @[@"Native To React"];
   callback(@[arr]);
@@ -41,4 +45,15 @@ RCT_REMAP_METHOD(findEvents,
   }
 }
 
+
+#pragma mark - 导出常量
++ (BOOL)requiresMainQueueSetup {
+  return YES;
+}
+
+- (NSDictionary *)constantsToExport {
+  return @{
+    @"name": @"zhangsan",
+  };
+}
 @end
