@@ -20,6 +20,7 @@
 		A135410C3E2466E7E07C4549 /* libPods-BridgingProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D5B8458FED1C33DCEE9888 /* libPods-BridgingProjectTests.a */; };
 		AD8D896ADB410382688A4282 /* libPods-BridgingProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B86680FEC46839E290C9D167 /* libPods-BridgingProject.a */; };
 		CDBDC767505E067742A03EBA /* libPods-BridgingProject-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BBF5B3C7F41F70D1C50AE3F /* libPods-BridgingProject-tvOS.a */; };
+		FEAEE7452440A6990069054F /* RNTMapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FEAEE7442440A6990069054F /* RNTMapManager.m */; };
 		FEDC09BF243B4D3F00E458BF /* CalendarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDC09BE243B4D3F00E458BF /* CalendarManager.m */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,8 @@
 		D9B292A510135C56ADC0F69A /* Pods-BridgingProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BridgingProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-BridgingProjectTests/Pods-BridgingProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		FEAEE7432440A6990069054F /* RNTMapManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNTMapManager.h; sourceTree = "<group>"; };
+		FEAEE7442440A6990069054F /* RNTMapManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNTMapManager.m; sourceTree = "<group>"; };
 		FEDC09BD243B4D3F00E458BF /* CalendarManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarManager.h; sourceTree = "<group>"; };
 		FEDC09BE243B4D3F00E458BF /* CalendarManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -206,6 +209,8 @@
 			children = (
 				FEDC09BD243B4D3F00E458BF /* CalendarManager.h */,
 				FEDC09BE243B4D3F00E458BF /* CalendarManager.m */,
+				FEAEE7432440A6990069054F /* RNTMapManager.h */,
+				FEAEE7442440A6990069054F /* RNTMapManager.m */,
 			);
 			path = NativeModel;
 			sourceTree = "<group>";
@@ -543,6 +548,7 @@
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				FEDC09BF243B4D3F00E458BF /* CalendarManager.m in Sources */,
+				FEAEE7452440A6990069054F /* RNTMapManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

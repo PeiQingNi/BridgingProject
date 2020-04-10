@@ -6,7 +6,10 @@ export default class Native extends React.Component {
     super(props);
 
     this.state = {
-      dataList: [{id: 1, title: 'NativeModel'}],
+      dataList: [
+        {id: 1, title: 'NativeModel'},
+        {id: 2, title: 'MapViewComponent'},
+      ],
     };
   }
 

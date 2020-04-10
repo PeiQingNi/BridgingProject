@@ -31,6 +31,7 @@ import WebViewComponent from '../pages/home/WebViewComponent';
 
 import Native from '../pages/native/Native';
 import NativeModel from '../pages/native/NativeModel';
+import MapViewComponent from '../pages/native/MapViewComponent';
 
 const Stack = createStackNavigator();
 
@@ -105,6 +106,7 @@ function NativeStack() {
     <Stack.Navigator>
       <Stack.Screen name="Native" component={Native} />
       <Stack.Screen name="NativeModel" component={NativeModel} />
+      <Stack.Screen name="MapViewComponent" component={MapViewComponent} />
     </Stack.Navigator>
   );
 }

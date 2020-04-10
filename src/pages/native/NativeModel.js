@@ -59,11 +59,15 @@ export default class NativeModel extends React.Component {
         <Button
           title={'Native Send Message To React'}
           onPress={() => {
-            CalendarManager.findEvent(event => {
-              console.log('event =>', event);
-              this.setState({
-                text_1: event,
-              });
+            CalendarManager.findEvent((error, event) => {
+              if (error) {
+                console.error(error);
+              } else {
+                console.log('event =>', event);
+                this.setState({
+                  text_1: event,
+                });
+              }
             });
           }}
         />
