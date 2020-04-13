@@ -4,7 +4,6 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import Home from '../pages/home/Home';
-
 import ActivityIndicatorComponent from '../pages/home/ActivityIndicatorComponent';
 import ButtonComponent from '../pages/home/ButtonComponent';
 import DatePickerIOSComponent from '../pages/home/DatePickerIOSComponent';
@@ -14,7 +13,6 @@ import ImageBackgroundComponent from '../pages/home/ImageBackgroundComponent';
 import KeyboardAvoidingViewComponent from '../pages/home/KeyboardAvoidingViewComponent';
 import MaskedViewIOSComponent from '../pages/home/MaskedViewIOSComponent';
 import ModalComponent from '../pages/home/ModalComponent';
-
 import RefreshControlComponent from '../pages/home/RefreshControlComponent';
 import SafeAreaViewComponent from '../pages/home/SafeAreaViewComponent';
 import ScrollViewComponent from '../pages/home/ScrollViewComponent';
@@ -32,6 +30,9 @@ import WebViewComponent from '../pages/home/WebViewComponent';
 import Native from '../pages/native/Native';
 import NativeModel from '../pages/native/NativeModel';
 import MapViewComponent from '../pages/native/MapViewComponent';
+
+import Style from '../pages/style/Style';
+import FlexBoxComponent from '../pages/style/FlexBoxComponent';
 
 const Stack = createStackNavigator();
 
@@ -111,6 +112,15 @@ function NativeStack() {
   );
 }
 
+function StyleStack() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="Style" component={Style} />
+      <Stack.Screen name={'FlexBoxComponent'} component={FlexBoxComponent} />
+    </Stack.Navigator>
+  );
+}
+
 const Tab = createBottomTabNavigator();
 
 function TabNavigator() {
@@ -119,6 +129,7 @@ function TabNavigator() {
       <Tab.Navigator>
         <Tab.Screen name="HomeStack" component={HomeStack} />
         <Tab.Screen name="NativeStack" component={NativeStack} />
+        <Tab.Screen name="StyleStack" component={StyleStack} />
       </Tab.Navigator>
     </NavigationContainer>
   );
