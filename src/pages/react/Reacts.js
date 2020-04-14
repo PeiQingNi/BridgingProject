@@ -7,6 +7,7 @@ export default class Reacts extends React.Component {
     this.state = {
       dataList: [],
     };
+  }
 
   _didClickItem = path => {
     this.props.navigation.navigate(path);
