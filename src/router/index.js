@@ -34,105 +34,105 @@ import MapViewComponent from '../pages/native/MapViewComponent';
 import Style from '../pages/style/Style';
 import FlexBoxComponent from '../pages/style/FlexBoxComponent';
 
+import Reacts from '../pages/react/Reacts';
+
+// todo: Stack
 const Stack = createStackNavigator();
-
-function HomeStack() {
-  return (
-    <Stack.Navigator initialRouteName="Home">
-      <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen
-        name="ActivityIndicatorComponent"
-        component={ActivityIndicatorComponent}
-      />
-      <Stack.Screen name="ButtonComponent" component={ButtonComponent} />
-      <Stack.Screen
-        name="DatePickerIOSComponent"
-        component={DatePickerIOSComponent}
-      />
-      <Stack.Screen
-        name="DrawerLayoutAndroidComponent"
-        component={DrawerLayoutAndroidComponent}
-      />
-      <Stack.Screen name="ImageComponent" component={ImageComponent} />
-      <Stack.Screen
-        name="ImageBackgroundComponent"
-        component={ImageBackgroundComponent}
-      />
-      <Stack.Screen
-        name="KeyboardAvoidingViewComponent"
-        component={KeyboardAvoidingViewComponent}
-      />
-      <Stack.Screen
-        name="MaskedViewIOSComponent"
-        component={MaskedViewIOSComponent}
-      />
-      <Stack.Screen name="ModalComponent" component={ModalComponent} />
-      <Stack.Screen
-        name="RefreshControlComponent"
-        component={RefreshControlComponent}
-      />
-      <Stack.Screen
-        name="SafeAreaViewComponent"
-        component={SafeAreaViewComponent}
-      />
-      <Stack.Screen
-        name="ScrollViewComponent"
-        component={ScrollViewComponent}
-      />
-      <Stack.Screen
-        name="SectionListComponent"
-        component={SectionListComponent}
-      />
-      <Stack.Screen
-        name="SegmentedControlIOSComponent"
-        component={SegmentedControlIOSComponent}
-      />
-      <Stack.Screen name="SliderComponent" component={SliderComponent} />
-      <Stack.Screen name="StatusBarComponent" component={StatusBarComponent} />
-      <Stack.Screen name="SwitchComponent" component={SwitchComponent} />
-      <Stack.Screen name="TextComponent" component={TextComponent} />
-      <Stack.Screen name="TextInputComponent" component={TextInputComponent} />
-      <Stack.Screen name="ViewComponent" component={ViewComponent} />
-      <Stack.Screen
-        name="VirtualizedListComponent"
-        component={VirtualizedListComponent}
-      />
-      <Stack.Screen name="WebViewComponent" component={WebViewComponent} />
-    </Stack.Navigator>
-  );
-}
-
-function NativeStack() {
-  return (
-    <Stack.Navigator>
-      <Stack.Screen name="Native" component={Native} />
-      <Stack.Screen name="NativeModel" component={NativeModel} />
-      <Stack.Screen name="MapViewComponent" component={MapViewComponent} />
-    </Stack.Navigator>
-  );
-}
-
-function StyleStack() {
-  return (
-    <Stack.Navigator>
-      <Stack.Screen name="Style" component={Style} />
-      <Stack.Screen name={'FlexBoxComponent'} component={FlexBoxComponent} />
-    </Stack.Navigator>
-  );
-}
-
-const Tab = createBottomTabNavigator();
-
-function TabNavigator() {
+function AppStack() {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name="HomeStack" component={HomeStack} />
-        <Tab.Screen name="NativeStack" component={NativeStack} />
-        <Tab.Screen name="StyleStack" component={StyleStack} />
-      </Tab.Navigator>
+      <Stack.Navigator initialRouteName="TabNavigator">
+        {/*Home*/}
+        <Stack.Screen name="TabNavigator" component={TabNavigator} />
+        <Stack.Screen
+          name="ActivityIndicatorComponent"
+          component={ActivityIndicatorComponent}
+        />
+        <Stack.Screen name="ButtonComponent" component={ButtonComponent} />
+        <Stack.Screen
+          name="DatePickerIOSComponent"
+          component={DatePickerIOSComponent}
+        />
+        <Stack.Screen
+          name="DrawerLayoutAndroidComponent"
+          component={DrawerLayoutAndroidComponent}
+        />
+        <Stack.Screen name="ImageComponent" component={ImageComponent} />
+        <Stack.Screen
+          name="ImageBackgroundComponent"
+          component={ImageBackgroundComponent}
+        />
+        <Stack.Screen
+          name="KeyboardAvoidingViewComponent"
+          component={KeyboardAvoidingViewComponent}
+        />
+        <Stack.Screen
+          name="MaskedViewIOSComponent"
+          component={MaskedViewIOSComponent}
+        />
+        <Stack.Screen name="ModalComponent" component={ModalComponent} />
+        <Stack.Screen
+          name="RefreshControlComponent"
+          component={RefreshControlComponent}
+        />
+        <Stack.Screen
+          name="SafeAreaViewComponent"
+          component={SafeAreaViewComponent}
+        />
+        <Stack.Screen
+          name="ScrollViewComponent"
+          component={ScrollViewComponent}
+        />
+        <Stack.Screen
+          name="SectionListComponent"
+          component={SectionListComponent}
+        />
+        <Stack.Screen
+          name="SegmentedControlIOSComponent"
+          component={SegmentedControlIOSComponent}
+        />
+        <Stack.Screen name="SliderComponent" component={SliderComponent} />
+        <Stack.Screen
+          name="StatusBarComponent"
+          component={StatusBarComponent}
+        />
+        <Stack.Screen name="SwitchComponent" component={SwitchComponent} />
+        <Stack.Screen name="TextComponent" component={TextComponent} />
+        <Stack.Screen
+          name="TextInputComponent"
+          component={TextInputComponent}
+        />
+        <Stack.Screen name="ViewComponent" component={ViewComponent} />
+        <Stack.Screen
+          name="VirtualizedListComponent"
+          component={VirtualizedListComponent}
+        />
+        <Stack.Screen name="WebViewComponent" component={WebViewComponent} />
+
+        {/* Native */}
+        <Stack.Screen name="NativeModel" component={NativeModel} />
+        <Stack.Screen name="MapViewComponent" component={MapViewComponent} />
+
+        {/* Style */}
+        <Stack.Screen name={'FlexBoxComponent'} component={FlexBoxComponent} />
+
+        {/*  React  */}
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }
 
-export default TabNavigator;
+// todo: Tab
+const Tab = createBottomTabNavigator();
+function TabNavigator() {
+  return (
+    <Tab.Navigator>
+      <Tab.Screen name="Home" component={Home} />
+      <Tab.Screen name="Native" component={Native} />
+      <Tab.Screen name="Style" component={Style} />
+      <Tab.Screen name={'Reacts'} component={Reacts} />
+    </Tab.Navigator>
+  );
+}
+
+export default AppStack;
