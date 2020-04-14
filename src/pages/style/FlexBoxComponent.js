@@ -208,7 +208,39 @@ export default class FlexBoxComponent extends React.Component {
         {/* 五项目 */}
         <Text>五项目</Text>
         <View style={styles.body}>
-          <View style={[styles.box, styles.box41]}>
+          <View style={[styles.box, styles.box51]}>
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+          </View>
+
+          <View style={[styles.box, styles.box52]}>
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+          </View>
+
+          <View style={[styles.box, styles.box53]}>
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+          </View>
+
+          <View style={[styles.box, styles.box54]}>
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+          </View>
+
+          <View style={[styles.box, styles.box55]}>
             <View style={styles.item} />
             <View style={styles.item} />
             <View style={styles.item} />
@@ -287,18 +319,17 @@ const styles = StyleSheet.create({
   },
 
   box: {
-    width: 100,
-    height: 100,
+    width: 120,
+    height: 120,
     backgroundColor: '#000000',
     margin: 1,
   },
 
   item: {
-    width: 30,
-    height: 30,
+    width: 40,
+    height: 40,
     backgroundColor: '#ffffff',
-    borderRadius: 15,
-    // margin: 5,
+    borderRadius: 20,
   },
 
   box1: {
@@ -510,6 +541,37 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row-reverse',
     flexWrap: 'wrap-reverse',
+    justifyContent: 'space-between',
+  },
+
+  box51: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+  },
+
+  box52: {
+    display: 'flex',
+    flexDirection: 'column',
+    flexWrap: 'wrap',
+  },
+
+  box53: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap-reverse',
+  },
+
+  box54: {
+    display: 'flex',
+    flexDirection: 'column',
+    flexWrap: 'wrap-reverse',
+  },
+
+  box55: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
     justifyContent: 'space-between',
   },
 });
