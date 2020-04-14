@@ -1,6 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
-import {black} from 'color-name';
+import {ScrollView, View, Text, StyleSheet} from 'react-native';
 
 export default class FlexBoxComponent extends React.Component {
   constructor(props) {
@@ -9,7 +8,8 @@ export default class FlexBoxComponent extends React.Component {
 
   render() {
     return (
-      <View>
+      <ScrollView>
+        {/*单项目*/}
         <Text>单项目</Text>
         <View style={styles.body}>
           <View style={styles.box}>
@@ -49,6 +49,7 @@ export default class FlexBoxComponent extends React.Component {
           </View>
         </View>
 
+        {/* 双项目 */}
         <Text>双项目</Text>
         <View style={styles.body}>
           <View style={[styles.box, styles.box21]}>
@@ -87,11 +88,193 @@ export default class FlexBoxComponent extends React.Component {
           </View>
 
           <View style={[styles.box, styles.box28]}>
+            <View style={{...styles.item, alignSelf: 'flex-end'}} />
             <View style={styles.item} />
-            <View style={{...styles.item, alignSelf: 'center'}} />
           </View>
         </View>
-      </View>
+
+        {/*三项目*/}
+        <Text>三项目</Text>
+        <View style={styles.body}>
+          <View style={[styles.box, styles.box31]}>
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+          </View>
+
+          <View style={[styles.box, styles.box32]}>
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+          </View>
+
+          <View style={[styles.box, styles.box33]}>
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+          </View>
+
+          <View style={[styles.box, styles.box34]}>
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+          </View>
+
+          <View style={[styles.box, styles.box35]}>
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+          </View>
+
+          <View style={[styles.box, styles.box36]}>
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+          </View>
+
+          <View style={[styles.box, styles.box37]}>
+            <View style={styles.item} />
+            <View style={{...styles.item, alignSelf: 'center'}} />
+            <View style={{...styles.item, alignSelf: 'flex-end'}} />
+          </View>
+
+          <View style={[styles.box, styles.box38]}>
+            <View style={{...styles.item, alignSelf: 'flex-end'}} />
+            <View style={{...styles.item, alignSelf: 'center'}} />
+            <View style={styles.item} />
+          </View>
+        </View>
+
+        {/* 四项目 */}
+        <Text>四项目</Text>
+        <View style={styles.body}>
+          <View style={[styles.box, styles.box41]}>
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+          </View>
+
+          <View style={[styles.box, styles.box42]}>
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+          </View>
+
+          <View style={[styles.box, styles.box43]}>
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+          </View>
+
+          <View style={[styles.box, styles.box44]}>
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+          </View>
+
+          <View style={[styles.box, styles.box45]}>
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+          </View>
+
+          <View style={[styles.box, styles.box46]}>
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+          </View>
+
+          <View style={[styles.box, styles.box47]}>
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+          </View>
+
+          <View style={[styles.box, styles.box48]}>
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+          </View>
+        </View>
+
+        {/* 五项目 */}
+        <Text>五项目</Text>
+        <View style={styles.body}>
+          <View style={[styles.box, styles.box41]}>
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+          </View>
+        </View>
+
+        {/* 六项目 */}
+        <Text>六项目</Text>
+        <View style={styles.body}>
+          <View style={[styles.box, styles.box41]}>
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+          </View>
+        </View>
+
+        {/* 七项目 */}
+        <Text>七项目</Text>
+        <View style={styles.body}>
+          <View style={[styles.box, styles.box41]}>
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+          </View>
+        </View>
+
+        {/* 八项目 */}
+        <Text>八项目</Text>
+        <View style={styles.body}>
+          <View style={[styles.box, styles.box41]}>
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+          </View>
+        </View>
+
+        {/* 九项目 */}
+        <Text>九项目</Text>
+        <View style={styles.body}>
+          <View style={[styles.box, styles.box41]}>
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+            <View style={styles.item} />
+          </View>
+        </View>
+      </ScrollView>
     );
   }
 }
@@ -111,11 +294,11 @@ const styles = StyleSheet.create({
   },
 
   item: {
-    width: 10,
-    height: 10,
+    width: 30,
+    height: 30,
     backgroundColor: '#ffffff',
-    borderRadius: 5,
-    margin: 5,
+    borderRadius: 15,
+    // margin: 5,
   },
 
   box1: {
@@ -219,5 +402,114 @@ const styles = StyleSheet.create({
   box28: {
     display: 'flex',
     flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+
+  box31: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+
+  box32: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+
+  box33: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-end',
+  },
+
+  box34: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+  },
+
+  box35: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+
+  box36: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    alignItems: 'flex-end',
+  },
+
+  box37: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+
+  box38: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+
+  box41: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+  },
+
+  box42: {
+    display: 'flex',
+    flexDirection: 'row-reverse',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+  },
+
+  box43: {
+    display: 'flex',
+    flexDirection: 'column',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+  },
+
+  box44: {
+    display: 'flex',
+    flexDirection: 'column-reverse',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+  },
+
+  box45: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap-reverse',
+    justifyContent: 'space-between',
+  },
+
+  box46: {
+    display: 'flex',
+    flexDirection: 'column',
+    flexWrap: 'wrap-reverse',
+    justifyContent: 'space-between',
+  },
+
+  box47: {
+    display: 'flex',
+    flexDirection: 'column-reverse',
+    flexWrap: 'wrap-reverse',
+    justifyContent: 'space-between',
+  },
+
+  box48: {
+    display: 'flex',
+    flexDirection: 'row-reverse',
+    flexWrap: 'wrap-reverse',
+    justifyContent: 'space-between',
   },
 });
