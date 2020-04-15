@@ -5,7 +5,10 @@ export default class Style extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      dataList: [{id: 1, title: 'FlexBoxComponent'}],
+      dataList: [
+        {id: 1, title: 'FlexBoxComponent'},
+        {id: 1, title: 'GriddingComponent'},
+      ],
     };
   }
 

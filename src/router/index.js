@@ -33,6 +33,7 @@ import MapViewComponent from '../pages/native/MapViewComponent';
 
 import Style from '../pages/style/Style';
 import FlexBoxComponent from '../pages/style/FlexBoxComponent';
+import GriddingComponent from '../pages/style/GriddingComponent';
 
 import Reacts from '../pages/react/Reacts';
 
@@ -115,6 +116,10 @@ function AppStack() {
 
         {/* Style */}
         <Stack.Screen name={'FlexBoxComponent'} component={FlexBoxComponent} />
+        <Stack.Screen
+          name={'GriddingComponent'}
+          component={GriddingComponent}
+        />
 
         {/*  React  */}
       </Stack.Navigator>
