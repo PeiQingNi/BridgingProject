@@ -36,6 +36,7 @@ import FlexBoxComponent from '../pages/style/FlexBoxComponent';
 import GriddingComponent from '../pages/style/GriddingComponent';
 
 import Reacts from '../pages/react/Reacts';
+import JSXIntroComponent from '../pages/react/JSXIntroComponent';
 
 // todo: Stack
 const Stack = createStackNavigator();
@@ -122,6 +123,10 @@ function AppStack() {
         />
 
         {/*  React  */}
+        <Stack.Screen
+          name={'JSXIntroComponent'}
+          component={JSXIntroComponent}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

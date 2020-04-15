@@ -5,7 +5,9 @@ export default class Reacts extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      dataList: [],
+      dataList: [
+        {id: 1, title: 'JSXIntroComponent'},
+      ],
     };
   }
 
