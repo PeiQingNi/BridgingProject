@@ -23,4 +23,15 @@ flexGrow属性决定项目的放大比例
 
 flexShrink属性决定项目的缩小比例
 
-[]: https://reactnative.dev/docs/flexbox#going-deeper
+
+**外边距属性：**
+margin、marginTop、marginBottom、marginLeft、marginRight、marginStart、marginEnd、marginHorizontal、marginVertical
+
+**内边距属性：**
+padding、paddingTop、paddingBottom、paddingLeft、paddingRight、paddingStart、paddingEnd、paddingHorizontal、paddingVertical
+
+**边框属性：**
+borderWidth、borderTopWidth、borderBottomWidth、borderLeftWidth、borderRightWidth、borderStartWidth、borderEndWidth
+
+**宽高属性：**
+width、height、maxWidth、maxHeight、minWidth、minHeight

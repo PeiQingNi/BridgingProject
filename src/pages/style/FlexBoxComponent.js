@@ -1,6 +1,21 @@
 import React from 'react';
 import {ScrollView, View, Text, StyleSheet} from 'react-native';
 
+class BoxItem extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    const {style, index} = this.props;
+    return (
+      <View style={{...style}}>
+        <Text>{index}</Text>
+      </View>
+    );
+  }
+}
+
 export default class FlexBoxComponent extends React.Component {
   constructor(props) {
     super(props);
@@ -13,39 +28,39 @@ export default class FlexBoxComponent extends React.Component {
         <Text>单项目</Text>
         <View style={styles.body}>
           <View style={styles.box}>
-            <View style={styles.item} />
+            <BoxItem style={styles.item} index={1} />
           </View>
 
           <View style={[styles.box, styles.box1]}>
-            <View style={styles.item} />
+            <BoxItem style={styles.item} index={1} />
           </View>
 
           <View style={[styles.box, styles.box2]}>
-            <View style={styles.item} />
+            <BoxItem style={styles.item} index={1} />
           </View>
 
           <View style={[styles.box, styles.box3]}>
-            <View style={styles.item} />
+            <BoxItem style={styles.item} index={1} />
           </View>
 
           <View style={[styles.box, styles.box4]}>
-            <View style={styles.item} />
+            <BoxItem style={styles.item} index={1} />
           </View>
 
           <View style={[styles.box, styles.box5]}>
-            <View style={styles.item} />
+            <BoxItem style={styles.item} index={1} />
           </View>
 
           <View style={[styles.box, styles.box6]}>
-            <View style={styles.item} />
+            <BoxItem style={styles.item} index={1} />
           </View>
 
           <View style={[styles.box, styles.box7]}>
-            <View style={styles.item} />
+            <BoxItem style={styles.item} index={1} />
           </View>
 
           <View style={[styles.box, styles.box8]}>
-            <View style={styles.item} />
+            <BoxItem style={styles.item} index={1} />
           </View>
         </View>
 
@@ -53,43 +68,49 @@ export default class FlexBoxComponent extends React.Component {
         <Text>双项目</Text>
         <View style={styles.body}>
           <View style={[styles.box, styles.box21]}>
-            <View style={styles.item} />
-            <View style={styles.item} />
+            <BoxItem style={styles.item} index={1} />
+            <BoxItem style={styles.item} index={2} />
           </View>
 
           <View style={[styles.box, styles.box22]}>
-            <View style={styles.item} />
-            <View style={styles.item} />
+            <BoxItem style={styles.item} index={1} />
+            <BoxItem style={styles.item} index={2} />
           </View>
 
           <View style={[styles.box, styles.box23]}>
-            <View style={styles.item} />
-            <View style={styles.item} />
+            <BoxItem style={styles.item} index={1} />
+            <BoxItem style={styles.item} index={2} />
           </View>
 
           <View style={[styles.box, styles.box24]}>
-            <View style={styles.item} />
-            <View style={styles.item} />
+            <BoxItem style={styles.item} index={1} />
+            <BoxItem style={styles.item} index={2} />
           </View>
 
           <View style={[styles.box, styles.box25]}>
-            <View style={styles.item} />
-            <View style={styles.item} />
+            <BoxItem style={styles.item} index={1} />
+            <BoxItem style={styles.item} index={2} />
           </View>
 
           <View style={[styles.box, styles.box26]}>
-            <View style={styles.item} />
-            <View style={styles.item} />
+            <BoxItem style={styles.item} index={1} />
+            <BoxItem style={styles.item} index={2} />
           </View>
 
           <View style={[styles.box, styles.box27]}>
-            <View style={styles.item} />
-            <View style={{...styles.item, alignSelf: 'flex-end'}} />
+            <BoxItem style={styles.item} index={1} />
+            <BoxItem
+              style={{...styles.item, alignSelf: 'flex-end'}}
+              index={2}
+            />
           </View>
 
           <View style={[styles.box, styles.box28]}>
-            <View style={{...styles.item, alignSelf: 'flex-end'}} />
-            <View style={styles.item} />
+            <BoxItem
+              style={{...styles.item, alignSelf: 'flex-end'}}
+              index={1}
+            />
+            <BoxItem style={styles.item} index={2} />
           </View>
         </View>
 
@@ -97,51 +118,57 @@ export default class FlexBoxComponent extends React.Component {
         <Text>三项目</Text>
         <View style={styles.body}>
           <View style={[styles.box, styles.box31]}>
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
+            <BoxItem style={styles.item} index={1} />
+            <BoxItem style={styles.item} index={2} />
+            <BoxItem style={styles.item} index={3} />
           </View>
 
           <View style={[styles.box, styles.box32]}>
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
+            <BoxItem style={styles.item} index={1} />
+            <BoxItem style={styles.item} index={2} />
+            <BoxItem style={styles.item} index={3} />
           </View>
 
           <View style={[styles.box, styles.box33]}>
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
+            <BoxItem style={styles.item} index={1} />
+            <BoxItem style={styles.item} index={2} />
+            <BoxItem style={styles.item} index={3} />
           </View>
 
           <View style={[styles.box, styles.box34]}>
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
+            <BoxItem style={styles.item} index={1} />
+            <BoxItem style={styles.item} index={2} />
+            <BoxItem style={styles.item} index={3} />
           </View>
 
           <View style={[styles.box, styles.box35]}>
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
+            <BoxItem style={styles.item} index={1} />
+            <BoxItem style={styles.item} index={2} />
+            <BoxItem style={styles.item} index={3} />
           </View>
 
           <View style={[styles.box, styles.box36]}>
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
+            <BoxItem style={styles.item} index={1} />
+            <BoxItem style={styles.item} index={2} />
+            <BoxItem style={styles.item} index={3} />
           </View>
 
           <View style={[styles.box, styles.box37]}>
-            <View style={styles.item} />
-            <View style={{...styles.item, alignSelf: 'center'}} />
-            <View style={{...styles.item, alignSelf: 'flex-end'}} />
+            <BoxItem style={styles.item} index={1} />
+            <BoxItem style={{...styles.item, alignSelf: 'center'}} index={2} />
+            <BoxItem
+              style={{...styles.item, alignSelf: 'flex-end'}}
+              index={3}
+            />
           </View>
 
           <View style={[styles.box, styles.box38]}>
-            <View style={{...styles.item, alignSelf: 'flex-end'}} />
-            <View style={{...styles.item, alignSelf: 'center'}} />
-            <View style={styles.item} />
+            <BoxItem
+              style={{...styles.item, alignSelf: 'flex-end'}}
+              index={1}
+            />
+            <BoxItem style={{...styles.item, alignSelf: 'center'}} index={2} />
+            <BoxItem style={styles.item} index={3} />
           </View>
         </View>
 
@@ -149,59 +176,59 @@ export default class FlexBoxComponent extends React.Component {
         <Text>四项目</Text>
         <View style={styles.body}>
           <View style={[styles.box, styles.box41]}>
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
+            <BoxItem style={styles.item} index={1} />
+            <BoxItem style={styles.item} index={2} />
+            <BoxItem style={styles.item} index={3} />
+            <BoxItem style={styles.item} index={4} />
           </View>
 
           <View style={[styles.box, styles.box42]}>
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
+            <BoxItem style={styles.item} index={1} />
+            <BoxItem style={styles.item} index={2} />
+            <BoxItem style={styles.item} index={3} />
+            <BoxItem style={styles.item} index={4} />
           </View>
 
           <View style={[styles.box, styles.box43]}>
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
+            <BoxItem style={styles.item} index={1} />
+            <BoxItem style={styles.item} index={2} />
+            <BoxItem style={styles.item} index={3} />
+            <BoxItem style={styles.item} index={4} />
           </View>
 
           <View style={[styles.box, styles.box44]}>
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
+            <BoxItem style={styles.item} index={1} />
+            <BoxItem style={styles.item} index={2} />
+            <BoxItem style={styles.item} index={3} />
+            <BoxItem style={styles.item} index={4} />
           </View>
 
           <View style={[styles.box, styles.box45]}>
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
+            <BoxItem style={styles.item} index={1} />
+            <BoxItem style={styles.item} index={2} />
+            <BoxItem style={styles.item} index={3} />
+            <BoxItem style={styles.item} index={4} />
           </View>
 
           <View style={[styles.box, styles.box46]}>
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
+            <BoxItem style={styles.item} index={1} />
+            <BoxItem style={styles.item} index={2} />
+            <BoxItem style={styles.item} index={3} />
+            <BoxItem style={styles.item} index={4} />
           </View>
 
           <View style={[styles.box, styles.box47]}>
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
+            <BoxItem style={styles.item} index={1} />
+            <BoxItem style={styles.item} index={2} />
+            <BoxItem style={styles.item} index={3} />
+            <BoxItem style={styles.item} index={4} />
           </View>
 
           <View style={[styles.box, styles.box48]}>
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
+            <BoxItem style={styles.item} index={1} />
+            <BoxItem style={styles.item} index={2} />
+            <BoxItem style={styles.item} index={3} />
+            <BoxItem style={styles.item} index={4} />
           </View>
         </View>
 
@@ -209,101 +236,110 @@ export default class FlexBoxComponent extends React.Component {
         <Text>五项目</Text>
         <View style={styles.body}>
           <View style={[styles.box, styles.box51]}>
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
+            <BoxItem style={styles.item} index={1} />
+            <BoxItem style={styles.item} index={2} />
+            <BoxItem style={styles.item} index={3} />
+            <BoxItem style={styles.item} index={4} />
+            <BoxItem style={styles.item} index={5} />
           </View>
 
           <View style={[styles.box, styles.box52]}>
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
+            <BoxItem style={styles.item} index={1} />
+            <BoxItem style={styles.item} index={2} />
+            <BoxItem style={styles.item} index={3} />
+            <BoxItem style={styles.item} index={4} />
+            <BoxItem style={styles.item} index={5} />
           </View>
 
           <View style={[styles.box, styles.box53]}>
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
+            <BoxItem style={styles.item} index={1} />
+            <BoxItem style={styles.item} index={2} />
+            <BoxItem style={styles.item} index={3} />
+            <BoxItem style={styles.item} index={4} />
+            <BoxItem style={styles.item} index={5} />
           </View>
 
           <View style={[styles.box, styles.box54]}>
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
+            <BoxItem style={styles.item} index={1} />
+            <BoxItem style={styles.item} index={2} />
+            <BoxItem style={styles.item} index={3} />
+            <BoxItem style={styles.item} index={4} />
+            <BoxItem style={styles.item} index={5} />
           </View>
 
           <View style={[styles.box, styles.box55]}>
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
+            <BoxItem style={styles.item} index={1} />
+            <BoxItem style={styles.item} index={2} />
+            <BoxItem style={styles.item} index={3} />
+            <BoxItem style={styles.item} index={4} />
+            <BoxItem style={styles.item} index={5} />
           </View>
         </View>
 
         {/* 六项目 */}
         <Text>六项目</Text>
         <View style={styles.body}>
-          <View style={[styles.box, styles.box41]}>
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
+          <View style={[styles.box, styles.box61]}>
+            <BoxItem style={styles.item} index={1} />
+            <BoxItem style={styles.item} index={2} />
+            <BoxItem style={styles.item} index={3} />
+            <BoxItem style={styles.item} index={4} />
+            <BoxItem style={styles.item} index={5} />
+            <BoxItem style={styles.item} index={6} />
+          </View>
+
+          <View style={[styles.box, styles.box62]}>
+            <BoxItem style={styles.item} index={1} />
+            <BoxItem style={styles.item} index={2} />
+            <BoxItem style={styles.item} index={3} />
+            <BoxItem style={styles.item} index={4} />
+            <BoxItem style={styles.item} index={5} />
+            <BoxItem style={styles.item} index={6} />
           </View>
         </View>
 
         {/* 七项目 */}
         <Text>七项目</Text>
         <View style={styles.body}>
-          <View style={[styles.box, styles.box41]}>
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
+          <View style={[styles.box, styles.box71]}>
+            <BoxItem style={styles.item} index={1} />
+            <BoxItem style={styles.item} index={2} />
+            <BoxItem style={styles.item} index={3} />
+            <BoxItem style={styles.item} index={4} />
+            <BoxItem style={styles.item} index={5} />
+            <BoxItem style={styles.item} index={6} />
+            <BoxItem style={styles.item} index={7} />
           </View>
         </View>
 
         {/* 八项目 */}
         <Text>八项目</Text>
         <View style={styles.body}>
-          <View style={[styles.box, styles.box41]}>
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
+          <View style={[styles.box, styles.box81]}>
+            <BoxItem style={styles.item} index={1} />
+            <BoxItem style={styles.item} index={2} />
+            <BoxItem style={styles.item} index={3} />
+            <BoxItem style={styles.item} index={4} />
+            <BoxItem style={styles.item} index={5} />
+            <BoxItem style={styles.item} index={6} />
+            <BoxItem style={styles.item} index={7} />
+            <BoxItem style={styles.item} index={8} />
           </View>
         </View>
 
         {/* 九项目 */}
         <Text>九项目</Text>
         <View style={styles.body}>
-          <View style={[styles.box, styles.box41]}>
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
-            <View style={styles.item} />
+          <View style={[styles.box, styles.box91]}>
+            <BoxItem style={styles.item} index={1} />
+            <BoxItem style={styles.item} index={2} />
+            <BoxItem style={styles.item} index={3} />
+            <BoxItem style={styles.item} index={4} />
+            <BoxItem style={styles.item} index={5} />
+            <BoxItem style={styles.item} index={6} />
+            <BoxItem style={styles.item} index={7} />
+            <BoxItem style={styles.item} index={8} />
+            <BoxItem style={styles.item} index={9} />
           </View>
         </View>
       </ScrollView>
@@ -330,6 +366,10 @@ const styles = StyleSheet.create({
     height: 40,
     backgroundColor: '#ffffff',
     borderRadius: 20,
+
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 
   box1: {
@@ -346,40 +386,34 @@ const styles = StyleSheet.create({
 
   box3: {
     display: 'flex',
-    flexDirection: 'column',
     justifyContent: 'center',
   },
 
   box4: {
     display: 'flex',
-    flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
   },
 
   box5: {
     display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'flex-end',
-    alignItems: 'center',
+    justifyContent: 'center',
+    alignItems: 'flex-end',
   },
 
   box6: {
     display: 'flex',
-    flexDirection: 'column',
     justifyContent: 'flex-end',
   },
 
   box7: {
     display: 'flex',
-    flexDirection: 'column',
     justifyContent: 'flex-end',
     alignItems: 'center',
   },
 
   box8: {
     display: 'flex',
-    flexDirection: 'column',
     justifyContent: 'flex-end',
     alignItems: 'flex-end',
   },
@@ -406,20 +440,17 @@ const styles = StyleSheet.create({
 
   box24: {
     display: 'flex',
-    flexDirection: 'column',
     justifyContent: 'space-between',
   },
 
   box25: {
     display: 'flex',
-    flexDirection: 'column',
     justifyContent: 'space-between',
     alignItems: 'center',
   },
 
   box26: {
     display: 'flex',
-    flexDirection: 'column',
     justifyContent: 'space-between',
     alignItems: 'flex-end',
   },
@@ -458,20 +489,17 @@ const styles = StyleSheet.create({
 
   box34: {
     display: 'flex',
-    flexDirection: 'column',
     justifyContent: 'space-between',
   },
 
   box35: {
     display: 'flex',
-    flexDirection: 'column',
     justifyContent: 'space-between',
     alignItems: 'center',
   },
 
   box36: {
     display: 'flex',
-    flexDirection: 'column',
     justifyContent: 'space-between',
     alignItems: 'flex-end',
   },
@@ -504,7 +532,6 @@ const styles = StyleSheet.create({
 
   box43: {
     display: 'flex',
-    flexDirection: 'column',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
   },
@@ -525,7 +552,6 @@ const styles = StyleSheet.create({
 
   box46: {
     display: 'flex',
-    flexDirection: 'column',
     flexWrap: 'wrap-reverse',
     justifyContent: 'space-between',
   },
@@ -552,7 +578,6 @@ const styles = StyleSheet.create({
 
   box52: {
     display: 'flex',
-    flexDirection: 'column',
     flexWrap: 'wrap',
   },
 
@@ -564,7 +589,6 @@ const styles = StyleSheet.create({
 
   box54: {
     display: 'flex',
-    flexDirection: 'column',
     flexWrap: 'wrap-reverse',
   },
 
@@ -573,5 +597,34 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
+  },
+
+  box61: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+  },
+
+  box62: {
+    display: 'flex',
+    flexWrap: 'wrap',
+  },
+
+  box71: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+  },
+
+  box81: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+  },
+
+  box91: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
   },
 });
