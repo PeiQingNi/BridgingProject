@@ -37,6 +37,9 @@ import GriddingComponent from '../pages/style/GriddingComponent';
 
 import Reacts from '../pages/react/Reacts';
 import JSXIntroComponent from '../pages/react/JSXIntroComponent';
+import HookComponent from '../pages/react/HookComponent';
+import PropTypesComponent from '../pages/react/PropTypesComponent';
+import FragmentsComponent from '../pages/react/FragmentsComponent';
 
 // todo: Stack
 const Stack = createStackNavigator();
@@ -126,6 +129,15 @@ function AppStack() {
         <Stack.Screen
           name={'JSXIntroComponent'}
           component={JSXIntroComponent}
+        />
+        <Stack.Screen name={'HookComponent'} component={HookComponent} />
+        <Stack.Screen
+          name={'PropTypesComponent'}
+          component={PropTypesComponent}
+        />
+        <Stack.Screen
+          name={'FragmentsComponent'}
+          component={FragmentsComponent}
         />
       </Stack.Navigator>
     </NavigationContainer>

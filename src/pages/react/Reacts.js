@@ -7,6 +7,9 @@ export default class Reacts extends React.Component {
     this.state = {
       dataList: [
         {id: 1, title: 'JSXIntroComponent'},
+        {id: 2, title: 'HookComponent'},
+        {id: 3, title: 'PropTypesComponent'},
+        {id: 4, title: 'FragmentsComponent'},
       ],
     };
   }

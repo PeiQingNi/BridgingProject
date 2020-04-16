@@ -58,6 +58,7 @@ class Clock extends React.Component {
   }
 }
 
+// 开关组件
 class Toggle extends React.Component {
   constructor(props) {
     super(props);
@@ -84,9 +85,44 @@ class Toggle extends React.Component {
   }
 }
 
+function UserGreeting() {
+  return (
+    <View>
+      <Text>Welcome back!</Text>
+    </View>
+  );
+}
+
+function GuestGreeting() {
+  return (
+    <View>
+      <Text>Please sign up.</Text>
+    </View>
+  );
+}
+
+function Greeting(props) {
+  const isLoggedIn = props.isLoggedIn;
+  if (isLoggedIn) {
+    return <UserGreeting />;
+  }
+  return <GuestGreeting />;
+}
+
+function LoginButton(props) {
+  return <Button title={'Login'} onPress={props.onClick} />;
+}
+
+function LogoutButton(props) {
+  return <Button title={'Logout'} onPress={props.onClick} />;
+}
+
 export default class JSXIntroComponent extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      isLoggedIn: true,
+    };
   }
 
   formatName(user) {
@@ -96,12 +132,26 @@ export default class JSXIntroComponent extends React.Component {
     return 'World';
   }
 
+  handleLoginClick = () => {
+    this.setState({
+      isLoggedIn: true,
+    });
+  };
+
+  handleLogoutClick = () => {
+    this.setState({
+      isLoggedIn: false,
+    });
+  };
+
   render() {
     const name = 'Josh Perez';
     const user = {
       firstName: 'Josh',
       lastName: 'Perez',
     };
+    const isLoggedIn = this.state.isLoggedIn;
+
     return (
       <View>
         <Text>hello, {name}</Text>
@@ -110,6 +160,12 @@ export default class JSXIntroComponent extends React.Component {
         <Welcomes name={'Smith'} />
         <Clock />
         <Toggle />
+        <Greeting isLoggedIn={isLoggedIn} />
+        {isLoggedIn ? (
+          <LogoutButton onClick={this.handleLogoutClick} />
+        ) : (
+          <LoginButton onClick={this.handleLoginClick} />
+        )}
       </View>
     );
   }

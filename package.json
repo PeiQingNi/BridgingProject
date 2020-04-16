@@ -20,7 +20,8 @@
     "react-native-reanimated": "^1.7.1",
     "react-native-safe-area-context": "^0.7.3",
     "react-native-screens": "^2.4.0",
-    "react-native-webview": "^8.0.5"
+    "react-native-webview": "^8.0.5",
+    "prop-types": "latest"
   },
   "devDependencies": {
     "@babel/core": "^7.7.5",
