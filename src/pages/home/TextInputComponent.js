@@ -53,6 +53,11 @@ export default class TextInputComponent extends React.Component {
           defaultValue={'onKeyPress'}
           onKeyPress={this._onKeyPress}
         />
+        <TextInput style={styles.input} defaultValue={'TextInput'} />
+        <TextInput style={styles.input} defaultValue={'TextInput'} />
+        <TextInput style={styles.input} defaultValue={'TextInput'} />
+        <TextInput style={styles.input} defaultValue={'TextInput'} />
+        <TextInput style={styles.input} defaultValue={'TextInput'} />
       </View>
     );
   }
@@ -63,5 +68,6 @@ const styles = StyleSheet.create({
     height: 40,
     borderColor: 'gray',
     borderWidth: 1,
+    margin: 10,
   },
 });
