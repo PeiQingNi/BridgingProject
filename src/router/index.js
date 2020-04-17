@@ -26,6 +26,7 @@ import TextInputComponent from '../pages/home/TextInputComponent';
 import ViewComponent from '../pages/home/ViewComponent';
 import VirtualizedListComponent from '../pages/home/VirtualizedListComponent';
 import WebViewComponent from '../pages/home/WebViewComponent';
+import FlatListComponent from '../pages/home/FlatListComponent';
 
 import Native from '../pages/native/Native';
 import NativeModel from '../pages/native/NativeModel';
@@ -113,6 +114,7 @@ function AppStack() {
           component={VirtualizedListComponent}
         />
         <Stack.Screen name="WebViewComponent" component={WebViewComponent} />
+        <Stack.Screen name="FlatListComponent" component={FlatListComponent} />
 
         {/* Native */}
         <Stack.Screen name="NativeModel" component={NativeModel} />

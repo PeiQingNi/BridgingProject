@@ -38,7 +38,7 @@ export default class Home extends React.Component {
         {id: 30, title: 'ViewPagerAndroid'},
         {id: 31, title: 'VirtualizedListComponent'},
         {id: 32, title: 'WebViewComponent'},
-        {id: 33, title: 'FlatList'},
+        {id: 33, title: 'FlatListComponent'},
       ],
     };
   }
