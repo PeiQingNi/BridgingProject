@@ -30,7 +30,12 @@
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
   
-  [IQKeyboardManager.sharedManager setEnable:YES];
+  IQKeyboardManager *keyboardManager = [IQKeyboardManager sharedManager];
+  keyboardManager.enable = YES;
+  keyboardManager.keyboardDistanceFromTextField = 0;
+  
+  keyboardManager.enableAutoToolbar = NO;
+  [keyboardManager reloadLayoutIfNeeded];
   
   return YES;
 }
