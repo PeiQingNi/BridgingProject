@@ -21,34 +21,6 @@ const DATA = [
     id: '58694a0f-3da1-471f-bd96-145571e29d72',
     title: 'Third Item',
   },
-  {
-    id: '58694a0f-3da1-471f-bd96-145571e29d73',
-    title: 'Fouth Item',
-  },
-  {
-    id: '58694a0f-3da1-471f-bd96-145571e29d74',
-    title: 'Fifth Item',
-  },
-  {
-    id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28bb',
-    title: 'First Item',
-  },
-  {
-    id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f65',
-    title: 'Second Item',
-  },
-  {
-    id: '58694a0f-3da1-471f-bd96-145571e29d77',
-    title: 'Third Item',
-  },
-  {
-    id: '58694a0f-3da1-471f-bd96-145571e29d79',
-    title: 'Fouth Item',
-  },
-  {
-    id: '58694a0f-3da1-471f-bd96-145571e29d70',
-    title: 'Fifth Item',
-  },
 ];
 
 function Item({id, title, selected, onSelect}) {
@@ -65,18 +37,12 @@ function Item({id, title, selected, onSelect}) {
 }
 
 function ItemSeparator() {
-  return <View style={{flex: 1, height: 1, backgroundColor: '#000000'}} />;
+  return <View style={styles.separator} />;
 }
 
 function ListEmpty() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#ff00ff',
-      }}>
+    <View style={styles.empty}>
       <Text>暂无数据</Text>
     </View>
   );
@@ -92,6 +58,7 @@ function ListHeader() {
 
 export default function FlatListComponent() {
   const [selected, setSelected] = React.useState(new Map());
+  const [isRefresh, setIsRefrese] = React.useState(false);
 
   const onSelect = React.useCallback(
     id => {
@@ -103,12 +70,11 @@ export default function FlatListComponent() {
     [selected],
   );
 
-  const flatList = React.useRef(null);
+  React.useEffect(() => {
+    console.log(selected);
+  }, [selected]);
 
-  const refreshAction = () => {
-    console.log('flatList =>', flatList);
-    flatList.current.scrollToEnd();
-  };
+  const flatList = React.useRef(null);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -136,9 +102,12 @@ export default function FlatListComponent() {
           alignItems: 'center',
         }}
         onRefresh={() => {
-          refreshAction();
+          setIsRefrese(true);
+          setTimeout(() => {
+            setIsRefrese(false);
+          }, 2000);
         }}
-        refreshing={false}
+        refreshing={isRefresh}
       />
     </SafeAreaView>
   );
@@ -156,5 +125,16 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 32,
+  },
+  separator: {
+    flex: 1,
+    height: 1,
+    backgroundColor: '#000000',
+  },
+  empty: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#ff00ff',
   },
 });

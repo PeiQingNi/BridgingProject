@@ -28,6 +28,11 @@ import VirtualizedListComponent from '../pages/home/VirtualizedListComponent';
 import WebViewComponent from '../pages/home/WebViewComponent';
 import FlatListComponent from '../pages/home/FlatListComponent';
 
+import APIS from '../pages/apis/APIS';
+import AccessibilityInfoComponent from '../pages/apis/AccessibilityInfoComponent';
+import AlertComponent from '../pages/apis/AlertComponent';
+import AnimatedComponent from '../pages/apis/AnimatedComponent';
+
 import Native from '../pages/native/Native';
 import NativeModel from '../pages/native/NativeModel';
 import MapViewComponent from '../pages/native/MapViewComponent';
@@ -116,6 +121,17 @@ function AppStack() {
         <Stack.Screen name="WebViewComponent" component={WebViewComponent} />
         <Stack.Screen name="FlatListComponent" component={FlatListComponent} />
 
+        {/* APIS */}
+        <Stack.Screen
+          name="AccessibilityInfoComponent"
+          component={AccessibilityInfoComponent}
+        />
+        <Stack.Screen name="AlertComponent" component={AlertComponent} />
+        <Stack.Screen
+          name={'AnimatedComponent'}
+          component={AnimatedComponent}
+        />
+
         {/* Native */}
         <Stack.Screen name="NativeModel" component={NativeModel} />
         <Stack.Screen name="MapViewComponent" component={MapViewComponent} />
@@ -152,6 +168,7 @@ function TabNavigator() {
   return (
     <Tab.Navigator>
       <Tab.Screen name="Home" component={Home} />
+      <Tab.Screen name="APIS" component={APIS} />
       <Tab.Screen name="Native" component={Native} />
       <Tab.Screen name="Style" component={Style} />
       <Tab.Screen name={'Reacts'} component={Reacts} />
