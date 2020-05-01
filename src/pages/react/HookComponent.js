@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
-import {View, Text, Button} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
+import Button from '../../component/Button';
 
-/** Hook 示例 */
+// todo: Hook 示例
 /**
  * Hook使用规则
  * 只能在函数最外层调用Hook
@@ -22,15 +23,47 @@ function Example() {
   }, [count_2]);
 
   return (
-    <View>
-      <Text>You clicked {count_1} times</Text>
-      <Button title={'Click me'} onPress={() => setCount_1(count_1 + 1)} />
-      <Text>number: {count_2}</Text>
-      <Button title={'Clicks'} onPress={() => setCount_2(count_2 + 2)} />
-    </View>
+    <>
+      <View style={styles.content}>
+        <Text style={styles.text}>You clicked {count_1} times</Text>
+        <Button
+          title={'Click me'}
+          style={styles.button}
+          onPress={() => setCount_1(count_1 + 1)}
+        />
+      </View>
+      <View style={styles.content}>
+        <Text style={styles.text}>number: {count_2}</Text>
+        <Button
+          title={'Clicks'}
+          style={styles.button}
+          onPress={() => setCount_2(count_2 + 2)}
+        />
+      </View>
+    </>
   );
 }
 
+const styles = StyleSheet.create({
+  content: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+
+  text: {
+    marginLeft: 10,
+    fontSize: 15,
+    fontWeight: '600',
+  },
+
+  button: {
+    marginVertical: 10,
+    marginRight: 10,
+  },
+});
+
+// todo: class demo
 // 等价的class示例
 class Examples extends React.Component {
   constructor(props) {
@@ -50,10 +83,11 @@ class Examples extends React.Component {
 
   render() {
     return (
-      <View>
-        <Text>You clicked {this.state.count} times</Text>
+      <View style={styles.content}>
+        <Text style={styles.text}>You clicked {this.state.count} times</Text>
         <Button
           title={'Click me'}
+          style={styles.button}
           onPress={() =>
             this.setState({
               count: this.state.count + 1,
