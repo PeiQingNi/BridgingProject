@@ -5,7 +5,7 @@ import {TouchableOpacity, View, Text, StyleSheet} from 'react-native';
 function Button(props) {
   const {title, style, onPress, titleStyle} = props;
   return (
-    <TouchableOpacity onPress={onPress}>
+    <TouchableOpacity onPress={() => onPress()}>
       <View style={[styles.btnContent, style]}>
         <Text style={titleStyle}>{title}</Text>
       </View>
