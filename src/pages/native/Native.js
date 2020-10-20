@@ -9,6 +9,7 @@ export default class Native extends React.Component {
       dataList: [
         {id: 1, title: 'NativeModel'},
         {id: 2, title: 'MapViewComponent'},
+        {id: 3, title: 'NiRefreshComponent'},
       ],
     };
   }

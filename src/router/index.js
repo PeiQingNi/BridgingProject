@@ -36,6 +36,7 @@ import AnimatedComponent from '../pages/apis/AnimatedComponent';
 import Native from '../pages/native/Native';
 import NativeModel from '../pages/native/NativeModel';
 import MapViewComponent from '../pages/native/MapViewComponent';
+import NiRefreshComponent from '../pages/native/NiRefreshComponent';
 
 import Style from '../pages/style/Style';
 import FlexBoxComponent from '../pages/style/FlexBoxComponent';
@@ -135,6 +136,10 @@ function AppStack() {
         {/* Native */}
         <Stack.Screen name="NativeModel" component={NativeModel} />
         <Stack.Screen name="MapViewComponent" component={MapViewComponent} />
+        <Stack.Screen
+          name="NiRefreshComponent"
+          component={NiRefreshComponent}
+        />
 
         {/* Style */}
         <Stack.Screen name={'FlexBoxComponent'} component={FlexBoxComponent} />
