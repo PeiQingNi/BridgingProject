@@ -10,6 +10,8 @@ export default class Reacts extends React.Component {
         {id: 2, title: 'HookComponent'},
         {id: 3, title: 'PropTypesComponent'},
         {id: 4, title: 'FragmentsComponent'},
+        {id: 5, title: 'ContextComponent'},
+        {id: 5, title: 'ErrorComponent'},
       ],
     };
   }

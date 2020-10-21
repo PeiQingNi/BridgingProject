@@ -47,6 +47,8 @@ import JSXIntroComponent from '../pages/react/JSXIntroComponent';
 import HookComponent from '../pages/react/HookComponent';
 import PropTypesComponent from '../pages/react/PropTypesComponent';
 import FragmentsComponent from '../pages/react/FragmentsComponent';
+import ContextComponent from '../pages/react/ContextComponent';
+import ErrorComponent from '../pages/react/ErrorComponent';
 
 // todo: Stack
 const Stack = createStackNavigator();
@@ -162,6 +164,8 @@ function AppStack() {
           name={'FragmentsComponent'}
           component={FragmentsComponent}
         />
+        <Stack.Screen name={'ContextComponent'} component={ContextComponent} />
+        <Stack.Screen name={'ErrorComponent'} component={ErrorComponent} />
       </Stack.Navigator>
     </NavigationContainer>
   );
