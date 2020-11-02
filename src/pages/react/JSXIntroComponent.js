@@ -117,6 +117,18 @@ function LogoutButton(props) {
   return <Button title={'Logout'} onPress={props.onClick} />;
 }
 
+function MyComponent(props) {
+  return <Text>{props.children}</Text>;
+}
+
+function MyContainer(props) {
+  return <View>{props.children}</View>;
+}
+
+function MyGroupComponent() {
+  return [<Text>aaa</Text>, <Text>bbb</Text>];
+}
+
 export default class JSXIntroComponent extends React.Component {
   constructor(props) {
     super(props);
@@ -166,6 +178,12 @@ export default class JSXIntroComponent extends React.Component {
         ) : (
           <LoginButton onClick={this.handleLoginClick} />
         )}
+        <MyComponent>Hello world!</MyComponent>
+        <MyContainer>
+          <MyComponent>Hello world!</MyComponent>
+          <MyComponent>Hello world!</MyComponent>
+        </MyContainer>
+        <MyGroupComponent />
       </View>
     );
   }

@@ -49,6 +49,7 @@ import PropTypesComponent from '../pages/react/PropTypesComponent';
 import FragmentsComponent from '../pages/react/FragmentsComponent';
 import ContextComponent from '../pages/react/ContextComponent';
 import ErrorComponent from '../pages/react/ErrorComponent';
+import ReactComponent from '../pages/react/ReactComponent';
 
 // todo: Stack
 const Stack = createStackNavigator();
@@ -166,6 +167,7 @@ function AppStack() {
         />
         <Stack.Screen name={'ContextComponent'} component={ContextComponent} />
         <Stack.Screen name={'ErrorComponent'} component={ErrorComponent} />
+        <Stack.Screen name={'ReactComponent'} component={ReactComponent} />
       </Stack.Navigator>
     </NavigationContainer>
   );
