@@ -11,7 +11,9 @@ export default class Reacts extends React.Component {
         {id: 3, title: 'PropTypesComponent'},
         {id: 4, title: 'FragmentsComponent'},
         {id: 5, title: 'ContextComponent'},
-        {id: 5, title: 'ErrorComponent'},
+        {id: 6, title: 'ErrorComponent'},
+        {id: 7, title: 'RefsComponent'},
+        {id: 8, title: 'JSXAdvComponent'},
       ],
     };
   }
