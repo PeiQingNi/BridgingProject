@@ -51,6 +51,7 @@ import ContextComponent from '../pages/react/ContextComponent';
 import ErrorComponent from '../pages/react/ErrorComponent';
 import RefsComponent from '../pages/react/RefsComponent';
 import JSXAdvComponent from '../pages/react/JSXAdvComponent';
+import ReactComponent from '../pages/react/ReactComponent';
 
 // todo: Stack
 const Stack = createStackNavigator();
@@ -168,8 +169,12 @@ function AppStack() {
         />
         <Stack.Screen name={'ContextComponent'} component={ContextComponent} />
         <Stack.Screen name={'ErrorComponent'} component={ErrorComponent} />
+<<<<<<< HEAD
         <Stack.Screen name={'RefsComponent'} component={RefsComponent} />
         <Stack.Screen name={'JSXAdvComponent'} component={JSXAdvComponent} />
+=======
+        <Stack.Screen name={'ReactComponent'} component={ReactComponent} />
+>>>>>>> bcf3b468352733bb545607890f18d90740b02b1e
       </Stack.Navigator>
     </NavigationContainer>
   );
