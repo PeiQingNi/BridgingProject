@@ -49,6 +49,8 @@ import PropTypesComponent from '../pages/react/PropTypesComponent';
 import FragmentsComponent from '../pages/react/FragmentsComponent';
 import ContextComponent from '../pages/react/ContextComponent';
 import ErrorComponent from '../pages/react/ErrorComponent';
+import RefsComponent from '../pages/react/RefsComponent';
+import JSXAdvComponent from '../pages/react/JSXAdvComponent';
 import ReactComponent from '../pages/react/ReactComponent';
 import RefComponent from '../pages/react/RefComponent';
 
@@ -168,6 +170,8 @@ function AppStack() {
         />
         <Stack.Screen name={'ContextComponent'} component={ContextComponent} />
         <Stack.Screen name={'ErrorComponent'} component={ErrorComponent} />
+        <Stack.Screen name={'RefsComponent'} component={RefsComponent} />
+        <Stack.Screen name={'JSXAdvComponent'} component={JSXAdvComponent} />
         <Stack.Screen name={'ReactComponent'} component={ReactComponent} />
         <Stack.Screen name={'RefComponent'} component={RefComponent} />
       </Stack.Navigator>
