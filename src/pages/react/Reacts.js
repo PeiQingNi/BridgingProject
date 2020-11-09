@@ -13,6 +13,7 @@ export default class Reacts extends React.Component {
         {id: 5, title: 'ContextComponent'},
         {id: 6, title: 'ErrorComponent'},
         {id: 7, title: 'ReactComponent'},
+        {id: 8, title: 'RefComponent'},
       ],
     };
   }

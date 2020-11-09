@@ -50,6 +50,7 @@ import FragmentsComponent from '../pages/react/FragmentsComponent';
 import ContextComponent from '../pages/react/ContextComponent';
 import ErrorComponent from '../pages/react/ErrorComponent';
 import ReactComponent from '../pages/react/ReactComponent';
+import RefComponent from '../pages/react/RefComponent';
 
 // todo: Stack
 const Stack = createStackNavigator();
@@ -168,6 +169,7 @@ function AppStack() {
         <Stack.Screen name={'ContextComponent'} component={ContextComponent} />
         <Stack.Screen name={'ErrorComponent'} component={ErrorComponent} />
         <Stack.Screen name={'ReactComponent'} component={ReactComponent} />
+        <Stack.Screen name={'RefComponent'} component={RefComponent} />
       </Stack.Navigator>
     </NavigationContainer>
   );
